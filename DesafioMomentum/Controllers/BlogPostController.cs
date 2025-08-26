@@ -105,14 +105,14 @@ namespace DesafioMomentum.Controllers
         [HttpPost]
         [Route("{BlogPostId}/comments")]
         [ProducesResponseType(typeof(ResponseCommentsJson), StatusCodes.Status201Created)]
-        public async Task<IActionResult> CreateComment([FromRoute] int blogPostId, [FromBody] RequestCommentJson request)
+        public async Task<IActionResult> CreateComment([FromRoute] int BlogPostId, [FromBody] RequestCommentJson request)
         {
             /*
                Aqui eu chamaria o useCase para inserir a entity Comments no banco de dados
                provavelmente tambem usando um autoMapper para converter de request para entity
                exemplo:
            
-               var post = await _dbContext.BlogPost.Include(p => p.Comments).FirstOrDefaultAsync(p => p.Id == blogPostId);
+               var post = await _dbContext.BlogPost.Include(p => p.Comments).FirstOrDefaultAsync(p => p.Id == BlogPostId);
                await _dbContext.Comments.AddAsync(BlogPost)
              */
 
