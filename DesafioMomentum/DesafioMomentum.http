@@ -1,0 +1,6 @@
+@DesafioMomentum_HostAddress = http://localhost:5124
+
+GET {{DesafioMomentum_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
